@@ -1,0 +1,36 @@
+.login-input-container {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.input-box-container {
+    display: flex;
+    background-color: lightblue;
+}
+
+.input-box-container div {
+    display: flex;
+    border: 2px solid yellowgreen;
+    align-items: center;
+}
+
+.login-input-container div {
+    display: flex;
+    padding: 10px;
+}
+
+.password-strength-validity-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.password-strength-validity-container div {
+    display: flex;
+    padding: 5px;
+    color: red;
+}

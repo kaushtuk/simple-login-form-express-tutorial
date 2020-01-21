@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Welcome to Demo Express </h1>
+    <div>
+        <button id="login-page">Login</button>
+        <button id="signup-page">SignUp</button>
+    </div>
+    <script>
+        (function () {
+            document.getElementById('login-page').addEventListener('click', e => {
+                document.location.href='http://localhost:3000/login';
+            });
+            document.getElementById('signup-page').addEventListener('click', e => {
+                //document.location.href='http://localhost:3000/signup';
+                console.log('Signup not implemented');
+            });
+        })();
+    </script>
+
+</html>
