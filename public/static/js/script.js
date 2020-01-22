@@ -46,24 +46,24 @@ function validatePasswordStrength() {
 document.getElementById('passwordTag').addEventListener('keyup', validatePasswordStrength);
 
 function ajax(url, method, data) {
-    return new Promise(function (resolve, reject) {
-        var request = new XMLHttpRequest();
-        request.open(method, url, true);
-        request.responseType = 'text';
-        request.setRequestHeader("Content-Type", "application/json");
-        request.onreadystatechange = function () {
-            if (request.readyState === XMLHttpRequest.DONE) {
-                if (request.status === 200) {
-                    resolve(request.responseText);
+    return new Promise( (resolve, reject) => {
+        var req = new XMLHttpRequest();
+        req.open(method, url, true);
+        req.responseType = 'text';
+        req.setRequestHeader("Content-Type", "application/json");
+        req.onreadystatechange = function () {
+            if (req.readyState === XMLHttpRequest.DONE) {
+                if (req.status === 200) {
+                    resolve(req.responseText);
                 } else {
-                    reject(Error(request.statusText));
+                    reject(Error(req.statusText));
                 }
             }
         };
-        request.onerror = function () {
+        req.onerror = function () {
             reject(Error("Network Error"));
         };
-        request.send(data);
+        req.send(data);
     });
 }
 
